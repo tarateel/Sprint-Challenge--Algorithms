@@ -97,6 +97,17 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
+        
+        # Turn on light
+        
+        # Bubble sorting
+        
+        # Get first item i
+        # Compare (light must be on)
+        # Starting at beginning, if [i] < r (robot's item), swap [i], [r]
+        # Continue with next item
+        # End of list, compare, swap if [i] < r (robot's item), and move right to [0]
+        # otherwise, [-1] <= 
         pass
 
 
