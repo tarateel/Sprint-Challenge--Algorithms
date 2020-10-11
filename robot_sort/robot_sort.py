@@ -99,16 +99,29 @@ class SortingRobot:
         # Fill this out
         
         # Turn on light
+        # while light is on, take item (use swap) and while robot can move right:
+        # move right
+        # compare robot item to list item
+        # compare: if list item is greater than robot item, swap and keep moving right
+        # at end of list (can_move_left is True), and robot still holds an item, go to beginning of list
+        # use swap() to put the item down (that will be beginning of list)
+        # repeat, if can_move_right
+                
+        self.set_light_on()
+        while self.light_is_on():
+            self.swap_item()
+            while self.can_move_right():
+                self.move_right()
+                if self.compare_item() == 1:
+                    self.swap_item()
+            while self.can_move_left() and self.compare_item() != None:
+                self.move_left()
+            self.swap_item()
+            if self.can_move_right():
+                self.move_right()
+            else:
+                self.set_light_off()
         
-        # Bubble sorting
-        
-        # Get first item i
-        # Compare (light must be on)
-        # Starting at beginning, if [i] < r (robot's item), swap [i], [r]
-        # Continue with next item
-        # End of list, compare, swap if [i] < r (robot's item), and move right to [0]
-        # otherwise, [-1] <= 
-        pass
 
 
 if __name__ == "__main__":
